@@ -22,7 +22,7 @@ public class Main {
         @Override
         public void handle(HttpExchange he) throws IOException {
             System.out.println("Client Connected");
-            String response = "Hello Simple Web : " + new Date().toString();
+            String response = "Hello Simple Web by yellowline : " + new Date().toString();
             he.sendResponseHeaders(200, response.length());
             OutputStream os = he.getResponseBody();
             os.write(response.getBytes());
